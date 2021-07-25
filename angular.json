@@ -19,14 +19,31 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": true,
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
-              "src/styles.css"
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker.css",
+              "./node_modules/datatables.net-buttons-dt/css/buttons.dataTables.css",
+              "src/styles.css",
+              "./node_modules/datatables.net-bs4/css/dataTables.bootstrap4.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.js",
+              "./node_modules/datatables.net/js/jquery.dataTables.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+              "./node_modules/chart.js/dist/chart.js",
+              "./node_modules/jszip/dist/jszip.js",
+              "./node_modules/datatables.net-buttons/js/dataTables.buttons.js",
+              "./node_modules/datatables.net-buttons/js/buttons.colVis.js",
+              "./node_modules/datatables.net-buttons/js/buttons.flash.js",
+              "./node_modules/datatables.net-buttons/js/buttons.html5.js",
+              "./node_modules/datatables.net-buttons/js/buttons.print.js",
+              "./node_modules/datatables.net-bs4/js/dataTables.bootstrap4.min.js",
+              "./node_modules/@linways/table-to-excel/dist/tableToExcel.js",
+              "./node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.js",
+              "./node_modules/bootstrap-datepicker/dist/locales/bootstrap-datepicker.tr.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -83,11 +100,9 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -101,9 +116,7 @@
               "tsconfig.spec.json",
               "e2e/tsconfig.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "e2e": {
@@ -119,6 +132,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "box-theme"
+    }
+  },
+  "defaultProject": "box-theme",
+  "cli": {
+    "analytics": false
+  }
 }
